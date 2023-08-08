@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping cart</title>
+</head>
+<body>
+   <header id="hdindex">
+    
+   </header>
+
+   <div class="manage-articles">
+    <form action="" class="manipulate-articles">
+            <p>Aktion wählen</p>
+            <fieldset class="actiontype">
+              <input type="radio" id="upd" name="action" value="update">
+              <label for="upd"> Artikel ändern</label> 
+              <br>
+              <input type="radio" id="del" name="action" value="delete">
+              <label for="del"> Artikel entfernen</label>
+              <br>
+              <input type="radio" id="ins" name="action" value="insert" checked>
+              <label for="ins"> Artikel einfügen </label> 
+            </fieldset>
+            <p></p>
+            <label class = "inplabel" for="artid"> ArtikelId (z. B.: a10010) </label> 
+            <input type="text" name="artid" id="art-id" minlength="6" maxlength="6" pattern="^a\d{5,5}" size="6" required>
+            <div class="change">
+                <label class = "inplabel" for="pname"> Produktbezeichnung  </label> 
+                <input type="text" name="pname" id="prod-name" minlength="5" maxlength="30" size="30" >
+                <label class = "inplabel" for="pdesc"> Beschreibung </label> 
+                <textarea name="pdesc" id="desc-id"  rows="2" cols="30"></textarea>
+                <label class = "inplabel" for="artprice"> Artikelpreis (z. B.: 99,99) </label> 
+                <input type="number" name="artprice" id="art-price" min="1" max="999"  step="0.01" > €
+
+             </div>
+             <button type="submit">submit</button>
+             <p></p>
+             <label id="info"></label>
+    </form>
+      
+    </div>
+
+
+
+
+
+
+
+
+   <script src="modules/article.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
