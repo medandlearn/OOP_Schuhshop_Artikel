@@ -74,6 +74,7 @@ if(articleForm) {
         const fd = new FormData(articleForm);
         const obj = Object.fromEntries(fd);
         console.log(obj);
+        domInfo.innerHTML = '';
        //
        // Prüfen ob Artikel bereits existiert.
        const art = shoeArticles.findArticle(obj.artid);
