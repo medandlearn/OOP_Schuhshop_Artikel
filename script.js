@@ -17,6 +17,7 @@ let activePage = "";
 const domProducts =  document.querySelector('.container'); 
 const shoeArticles = new Articles(domProducts);
 const domInfo = document.querySelector('#info'); 
+const products = document.querySelector('#cart-container');
 
 // Navigation part und Laden der jeweiligen Seiten
 window.onload = () => {
@@ -50,7 +51,7 @@ function setHeader(headerDiv) {
                     <li><a href="index.html">home</a></li>
                     <li><a href="manage.html">manage</a></li>
                     <li><a href="#">about</a></li>
-                    <li class="cart"><a href="#">
+                    <li class="cart"><a href="cart.html">
                         <ion-icon name="basket"></ion-icon> 
                         Cart <span>0</span></a>
                     </li>
@@ -100,10 +101,7 @@ const eurFormat = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 
 function initProducts() {
     console.log(shoeArticles.articleList);
 
-    // Create header
-    // headerDiv.innerHTML = "";
-    // headerDiv.innerHTML += headerHTML;
-
+   
     if (shoeArticles.articleList.length === 0 ) {
         let art = new Article('a10010','airSole', 'Sportschuh AirSole',  [8, 9, 10, 11], 149, 'mF_airSole');
         console.log(art);
@@ -120,10 +118,6 @@ function initProducts() {
     }
 }
 
-
-
-
-
  
 
 /* const clients = [
@@ -136,17 +130,14 @@ function initProducts() {
         kdName: 'testUser2'
     }
 ]
+*/
 
-let cart = {}; //leerer Key-value-store für den Einkaufswagen */
-
-
-
-/* 
+const  arrCart = []; //leerer Key-value-store für den Einkaufswagen */
 
 //Eventhandler
-if(domContainer) {
+if(domProducts) {
     // added only on index page
-    domContainer.addEventListener('click', addToCart);
+    domProducts.addEventListener('click', addToCart);
 } 
 
 if(products) {
@@ -315,5 +306,3 @@ function changeCartItems(ev) {
     init();
     displayShoppingCart();
 }
-
-*/

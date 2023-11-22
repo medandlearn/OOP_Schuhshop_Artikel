@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+input[type="text"] {
+    width: 80%;
+}
+
+input[type="button"] {
+    width: 10%;
+}

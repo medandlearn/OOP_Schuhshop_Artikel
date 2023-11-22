@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Warenkorb</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="Produkte.html">Produkte</a></li>
+        <li><a href="Warenkorb.html">Warenkorb</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Warenkorb</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Produkt-ID</th>
+            <th>Produktbezeichnung</th>
+            <th>Preis</th>
+            <th>Anzahl</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items">
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="2"></td>
+            <td>Gesamtpreis:</td>
+            <td id="total-price"></td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
