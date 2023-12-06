@@ -12,7 +12,7 @@ function addToCart(productId, productName, price, quantity) {
 }
 
 let buttons = document.querySelectorAll('.buy-button');
-for (var i = 0; i < buttons.length; i++) {
+for (let i = 0; i < buttons.length; i++) {
   buttons[i].onclick = function() {
     if(JSON.parse(localStorage.getItem('cart'))){
       arrCart = JSON.parse(localStorage.getItem('cart'));
